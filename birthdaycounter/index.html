@@ -26,6 +26,7 @@
             var newyear = new Date(current.getFullYear()+1, month, day, 0, 0, 0);
             if(year>current.getFullYear()){
                 document.getElementById("error").innerHTML = "Вы еще не родились!";
+                document.getElementById("ok").innerHTML = "";
                 document.getElementById("days").innerHTML = "";
                 document.getElementById("h").innerHTML = "";
                 document.getElementById("m").innerHTML = "";
@@ -38,7 +39,7 @@
             var h = Math.floor(diff % 86400000 / 3600000);
             var m = Math.floor((diff % 3600000) / 60000);
             var s = Math.floor((diff % 60000) / 1000);
-            document.getElementById("ok").innerHTML = "До вашего дня рождения осталось :"
+            document.getElementById("ok").innerHTML = "До вашего дня рождения осталось :";
             document.getElementById("error").innerHTML = "";
             document.getElementById("days").innerHTML = "Дней: " + d;
             document.getElementById("h").innerHTML = "Часов: " + h;
