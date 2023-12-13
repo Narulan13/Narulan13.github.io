@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    font-weight: normal;
+    font-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(index.avif) ;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.card {
+    width: 400px;
+    background-color: #801717;
+    padding: 100px 25px 30px;
+    color: #fff6f6;
+    height: 300px;
+    border-radius: 15%;
+
+}
+
+.day {
+    margin-bottom: 10px;
+    font-weight: 800;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.ds {
+    text-align: center;
+    font-weight: 800;
+    font-size: 25px;
+    padding-left: 81px;
+    display: inline-block;
+}
+
+.hs {
+    display: inline-block;
+    text-align: center;
+    padding-left: 50px;
+}
+
+.dayss {
+    text-align: center;
+}
+
+.hpn {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
