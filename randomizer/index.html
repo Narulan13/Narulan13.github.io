@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рандомайзер</title>
+</head>
+<body>
+    <style>
+        body, .navbar, p {
+             margin-left: 0%;
+             margin-right: 0%;
+             margin-top: 0%;
+        }
+        .navbar {
+            height: 100px;
+            width: 100%;
+            background-color: #7EBDC2;
+        }
+        .icon {
+            margin-left: 100px;
+            font-size: 70px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 550;
+        }
+    </style>
+    <div class="navbar">
+        <p class="icon">UlanRand</p>
+    </div>
+    <h1>Numbers</h1>
+    <button id="numbers" onclick="Numbers()">Numbers</button><br><br>
+    <input type="number" id="ot" value="1"><br><br>
+    <input type="number" id="do" value="100"><br><br>
+    <p id="ans">answer</p>
+
+
+    <h1>Groups</h1>
+    <p>How many groups should there be?</p>
+    <input type="number" id="count" value="2"><br><br>
+    <p>How many participants:</p>
+    <input type="number" id="part" value="4"><br><br>
+    <p>List:</p>
+    <input type="text" id="list" value="Alan,Sara,Estriper,Sigma"><br><br>
+    <button id="gr" onclick="Groups()">Randomise</button>
+    <p id="anss">answer</p>
+    <script>
+        function Numbers(){
+            let i = parseInt(document.getElementById("ot").value);
+            let x = parseInt(document.getElementById("do").value);
+            let r = Math.floor(Math.random() * (x - i + 1)) + i;
+            document.getElementById("ans").innerHTML = r;
+        }
+        function shuffle(array) {
+             array.sort(() => Math.random() - 0.5);
+        }
+        function Groups(){
+            let x = "";
+            let c = parseInt(document.getElementById("count").value);
+            let size = parseInt(document.getElementById("part").value);
+            let lists = new Array();
+            let str = document.getElementById("list").value;
+            let k = 0;
+            let d = "1 group : ";
+            let q = 2;
+            for(let i = 0; i < str.length; i++){
+                if(str[i]!=','){
+                    x+=str[i];
+                }
+                if(str[i]==',' || i === str.length-1) {
+                    lists.push(x);
+                    x = "";
+                }
+            }
+            shuffle(lists);
+            if(lists.length!=size){
+                document.getElementById("anss").innerHTML = "You have entered more/fewer participants than indicated";
+            }
+            else{
+            for(let i = 0; i < lists.length; i++){
+                if(k<Math.ceil(lists.length/c)){
+                    d+=lists[i];
+                    if (k < Math.ceil(lists.length/c)  - 1) {
+                        d += ', ';
+                    }
+                    k++;
+                }
+                if (k === Math.ceil(lists.length / c) || i === lists.length - 1 ) {
+                    if (q <= c) {
+                        d += `<br>${q} group: `;
+                        k = 0;
+                        q++;
+                    }
+                }
+            }
+            document.getElementById("anss").innerHTML = d;
+        }
+        }
+    </script>
+</body>
+</html>
