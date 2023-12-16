@@ -71,7 +71,8 @@ for (let i = 0; i < 9; i++) {
                     resetGame();
                 } else {
                     if(UsedCells.count===9){
-                        alert("Draw!");
+                        let ddd = 1;
+                        openmodal(ddd);
                         d += 1;
                         document.getElementById("draw").innerHTML = d;
                     }
