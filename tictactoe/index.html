@@ -4,10 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <style>
+        body {
+  text-align: center;
+  align-items: center;
+  background-color: #1B1F3B;
+}
+.board, .stats {
+    max-width: 600px; /* Максимальная ширина элементов */
+    margin: 0 auto; /* Устанавливаем отступы auto по горизонтали для центрирования */
+}
+
+.cells{
+    display: flex;
+    width: 600px;
+    border: 1px solid #000;
+}
+.cell{
+    font-size:150px;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    border: 2px solid #000;
+    color: #a5a39e;
+}
+.stats {
+    color : white;
+    width: 600px;
+    display: flex;
+    font-size: 20px;
+}
+.player1{
+    width: 500px;
+    margin-left: 50px;
+    text-align: center;
+}
+.draw{
+    width: 500px;
+    margin-left: 100px;
+    text-align: center;
+}
+.player2{
+    margin-left: 55px;
+    width: 1000px;
+    text-align: center;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+.close {
+    color: #000000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.turn {
+  color : white;
+  font-size: 50px;
+}
+#closef {
+  color: #EFA00B;
+}
+    </style>
     <div class="turn">
         Turn:
         <i id = "closef"></i>
