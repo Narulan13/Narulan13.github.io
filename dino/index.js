@@ -23,7 +23,6 @@ function increaseScore() {
 }
 
 function startGame() {
-    // Используйте touchstart вместо keydown для обработки касаний на мобильных устройствах
     document.addEventListener('touchstart', jump);
     document.addEventListener('keydown', jump);
     
@@ -54,13 +53,13 @@ function resetGame() {
     text.textContent = "Press Space or Touch to Start";
     cactus.style.animation = 'none';
     document.addEventListener('keydown', startOnSpace);
-    document.addEventListener('touchstart', startOnSpace); // Добавлен обработчик для события касания
+    document.addEventListener('touchstart', startOnSpace); 
 }
 
 function startOnSpace(event) {
     if (event.code === "Space" || event.type === "touchstart") {
         document.removeEventListener('keydown', startOnSpace);
-        document.removeEventListener('touchstart', startOnSpace); // Удаление обработчика после нажатия
+        document.removeEventListener('touchstart', startOnSpace); 
         cactus.style.animation = anim;
         text.textContent = "";
         startGame();
