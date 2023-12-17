@@ -23,7 +23,9 @@ function increaseScore() {
 }
 
 function startGame() {
+    document.addEventListener('touchstart', jump);
     document.addEventListener('keydown', jump);
+    
     let scoreTimer = setInterval(function () {
         increaseScore();
     }, 100);
@@ -48,14 +50,16 @@ function resetGame() {
     score = 0;
     scoreElement.textContent = "Sc: 0";
     cactus.style.left = '580px';
-    text.textContent = "Press Space to Start";
+    text.textContent = "Press Space or Touch to Start";
     cactus.style.animation = 'none';
     document.addEventListener('keydown', startOnSpace);
+    document.addEventListener('touchstart', startOnSpace);
 }
 
 function startOnSpace(event) {
-    if (event.code === "Space") {
+    if (event.code === "Space" || event.type === "touchstart") {
         document.removeEventListener('keydown', startOnSpace);
+        document.removeEventListener('touchstart', startOnSpace);
         cactus.style.animation = anim;
         text.textContent = "";
         startGame();
@@ -63,3 +67,4 @@ function startOnSpace(event) {
 }
 
 resetGame();
+
