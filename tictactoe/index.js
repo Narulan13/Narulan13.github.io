@@ -75,6 +75,7 @@ for (let i = 0; i < 9; i++) {
                         openmodal(ddd);
                         d += 1;
                         document.getElementById("draw").innerHTML = d;
+                        resetGame();
                     }
                     changeTurn();
                 }
