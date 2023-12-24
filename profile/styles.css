@@ -1,0 +1,257 @@
+@font-face {
+    font-family: font1;
+    src: url(quicksand/Quicksand_Light.otf);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: colorChange 10s linear infinite;
+  }
+  
+  @keyframes colorChange {
+    0% {
+      background-color: #3498db;
+    }
+    25% {
+      background-color: #e74c3c;
+    }
+    50% {
+      background-color: #2ecc71;
+    }
+    75% {
+      background-color: #f39c12;
+    }
+    100% {
+      background-color: #3498db;
+    }
+  }
+#bordermain {
+    position : fixed;
+} 
+#border {
+    position: fixed;
+    border: 2px solid black;
+    width: 1820px;
+    height: 770px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: inline-flex;
+    color: black;
+}
+
+#about {
+    width: 910px;
+    height: 770px;
+    display:inline-block;
+}
+#name {
+    font-family: "font1";
+    font-weight: 800;
+    margin-left: 30px;
+    margin-top: 20px;
+    font-size: 30px;
+}
+#who {
+    font-family: "font1";
+    font-weight: 100;
+    margin-top: 5px;
+    margin-left: 30px;
+    font-size: 15px;
+}
+#projects {
+    font-family: "font1";
+    font-weight: 600;
+    margin-top: 10px;
+    margin-left: 30px;
+    cursor: pointer;
+    position: relative;
+}
+#info {
+    font-family: "font1";
+    font-weight: 600;
+    margin-top: 10px;
+    margin-left: 30px;
+    cursor: pointer;
+    position: relative;
+}
+#home {
+    width : 5px;
+    height : 5px;
+    border-radius : 360px;
+    background-color : black;
+    font-family: "font1";
+    font-weight: 600;
+    margin-top: 40px;
+    margin-left: 30px;
+    cursor: pointer;
+    position: relative;
+}
+@keyframes anim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes attenuation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+#animfortext {
+    animation: anim 2s linear;
+}
+/*home*/
+#texthome {
+    display: inline-block;
+    text-align: right;
+    overflow: hidden;
+    width: 910px;
+    height: 770px;
+}
+#th {
+    margin-top: 30px;
+    align-items: end;
+    font-family: "font1";
+    font-weight: 600;
+    font-size: 100px;
+    position: relative;
+    margin-bottom: 20px;
+    margin-right: 30px;
+}
+
+/*projects*/
+#textpr {
+    display: inline-block;
+    text-align: right;
+    margin-left: 0px;
+    overflow: hidden;
+    width: 0px;
+    height: 0px;
+}
+#MP {
+    margin-top: 30px;
+    align-items: end;
+    font-family: "font1";
+    font-weight: 600;
+    font-size: 20px;
+    position: relative;
+    margin-bottom: 20px;
+    margin-right: 30px;
+}
+/*aboutme*/
+#information {
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+    margin-left: 0px;
+    text-align: right;
+    margin-right: 40px;
+}
+
+#soc {
+    margin-top: 30px;
+    font-size: 40px;
+    font-family: 'font1';
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+#social {
+    display: inline-block;
+    font-size: 40px;
+    color: black;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+/*Colors*/
+#textto{
+    display: inline-block;
+    font-family: 'font1';
+    font-size: 20px;
+    font-weight: 900;
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+    transform: rotate(180deg);
+    cursor: pointer;
+    width: 35px;
+    margin-left: 15px;
+    margin-top: 660px;
+}
+#tolight {
+    display: inline-block;
+}
+#todark {
+    padding-top: 20px;
+    display: inline-block;
+}
+.box1 {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border: 1px solid black;
+}
+.box2 {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border: 1px solid black;
+    background-color: #000000;
+}
+  
+
+/**/
+
+::-webkit-scrollbar {
+    width: 0;
+}
+#all {
+    overflow: scroll;
+    height : 720px;
+}
+#t {
+    margin-top: 40px;
+    margin-right:200px;
+    text-decoration: none;
+    color: black;
+    font-family: 'font1';
+    font-weight: bold;
+    font-size: 50px;
+    display: flex;
+}
+#date {
+    padding-top: 30px;
+    padding-right: 10px;
+    font-size: 20px;
+    font-weight: 100;
+}
+#t:hover {
+    color:azure;
+}
+
+.circle {
+    border-radius: 360px;
+    width : 5px;
+    height: 5px;
+    background-color: #000000;
+}
+
