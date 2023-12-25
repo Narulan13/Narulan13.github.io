@@ -43,7 +43,7 @@ body {
 #border {
     position: fixed;
     border: 2px solid black;
-    width: 90%;
+    width: 1820px;
     height: 770px;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -52,7 +52,6 @@ body {
 }
 
 #about {
-    position: fixed;
     width: 910px;
     height: 770px;
     display:inline-block;
@@ -77,6 +76,7 @@ body {
     margin-top: 10px;
     margin-left: 30px;
     cursor: pointer;
+    position: relative;
 }
 #info {
     font-family: "font1";
@@ -84,6 +84,7 @@ body {
     margin-top: 10px;
     margin-left: 30px;
     cursor: pointer;
+    position: relative;
 }
 #home {
     width : 5px;
@@ -95,6 +96,7 @@ body {
     margin-top: 40px;
     margin-left: 30px;
     cursor: pointer;
+    position: relative;
 }
 @keyframes anim {
     0% {
@@ -122,18 +124,18 @@ body {
     display: inline-block;
     text-align: right;
     overflow: hidden;
-    width: 100%;
-    height: 100%;
+    width: 910px;
+    height: 770px;
 }
 #th {
-    margin-top: 50%;
+    margin-top: 30px;
     align-items: end;
     font-family: "font1";
     font-weight: 600;
     font-size: 100px;
     position: relative;
     margin-bottom: 20px;
-    margin-right: 10%;
+    margin-right: 30px;
 }
 
 /*projects*/
@@ -191,14 +193,12 @@ body {
     white-space: nowrap;
     transform: rotate(180deg);
     cursor: pointer;
-    width: 1%;
-    margin-right: 90%;
-    margin-top: 2300%;
-    position: relative;
+    width: 35px;
+    margin-left: 15px;
+    margin-top: 660px;
 }
 #tolight {
     display: inline-block;
-    width: 10%;
 }
 #todark {
     padding-top: 20px;
@@ -254,4 +254,3 @@ body {
     height: 5px;
     background-color: #000000;
 }
-
