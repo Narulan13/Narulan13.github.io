@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zuer</title>
+    <link rel="icon" href="logo icon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section id="header">
+        <a href="index.html"><img src="ZUER-removebg-preview.png" alt="logo" class="logo"></a>
+        <div>
+            <ul id="navbar">
+                <a href="#" id="close"><i class="fa fa-times"></i></a>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#" class="fa fa-shopping-bag" id="bag"></a></li>
+            </ul>
+        </div>
+        <div id="mob">
+            <a href="#" class="fa fa-shopping-bag" style="color:rgb(0, 0, 0)" id="bg"></a>
+            <i id="bar" class="fa fa-outdent"></i>
+        </div>
+    </section>
+    <section id="prodetails" class="section-p1">
+        <div class="single-pro-img">
+            <img src="img/products/mahitotshirt.png" alt="" width="100%" id="mainimg">
+            <div class="small-img-gr">
+                <div class="small-img-col">
+                    <img src="img/products/mahitotshirt.png"  width="100%"  class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="img/products/m2.png"  width="100%"  class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="img/products/m3.png"  width="100%"  class="small-img" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="single-pro-details">
+            <h6>Home / T-Shirts</h6>
+            <h4>Mahito T-Shirt</h4>
+            <h2>$25</h2>
+            <select>
+                <option>Select Size</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+                <option>XXL</option>
+            </select>
+            <input type="number" value="1">
+            <button class="normal" onclick="addToCart(2)">Add to Cart</button>
+            <h4>Product Details</h4>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Sit libero corporis id harum expedita ex nisi dolores 
+                accusantium fugit facere, 
+                veritatis aliquid quae tenetur dolor consequuntur nostrum praesentium
+                cum eius. Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                Vero saepe fugiat repudiandae!
+                Exercitationem nostrum earum nisi assumenda vero sint porro 
+                expedita perspiciatis a sit, quis ut, accusamus quae, iusto voluptates
+            </span>
+        </div>
+    </section>
+    <section id="newarr">
+        <h2>Featured Productss</h2>
+        <p>Everything for Comfort</p>
+        <section id="product1" class="section-p1">
+            <div class="pro-container">
+                <div class="pro">
+                    <img src="img/products/p3.png" alt="" class="p1">
+                        <div class="des">
+                            <span>zuer</span>
+                            <h5>Gojo Satoru Poster</h5>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <h4>$30</h4>
+                        </div>
+                        <i class="fa fa-shopping-bag" onclick="addToCart(7)"></i>
+                </div>
+                <div class="pro">
+                    <img src="img/products/p6.webp" alt="" class="p1">
+                        <div class="des">
+                            <span>zuer</span>
+                            <h5>Choso T-Shirt</h5>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <h4>$25.99</h4>
+                        </div>
+                    <i class="fa fa-shopping-bag" onclick="addToCart(10)"></i>
+                </div>
+                <div class="pro">
+                    <img src="img/products/p7.png" alt="" class="p1">
+                        <div class="des">
+                            <span>zuer</span>
+                            <h5>Yuta & Rika Figure</h5>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <h4>$499.99</h4>
+                        </div>
+                    <i class="fa fa-shopping-bag" onclick="addToCart(11)"></i>
+                </div>
+                <div class="pro">
+                    <img src="img/products/p8.png" alt="" class="p1">
+                        <div class="des">
+                            <span>zuer</span>
+                            <h5>Gojo Satoru Figure</h5>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <h4>$419.99</h4>
+                        </div>
+                        <i class="fa fa-shopping-bag" onclick="addToCart(12)"></i>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For NewsLetters</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your E-mail adress">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+    <footer class="section-p1">
+        <div class="col">
+            <img src="ZUER-removebg-preview.png" alt="" class="logo">
+            <h4>Contact</h4>
+            <p><strong>Adress: </strong> 123 Wellington Road, Street 14, San-Francisco</p>
+            <p><strong>Phone: </strong> +77078271013</p>
+            <p><strong>Hours: </strong> 10:00 - 18:00, Mon-Sat</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="">About us</a>
+            <a href="">Delivery Information</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Terms & Conditions</a>
+            <a href="">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="">Sign In</a>
+            <a href="">View Cart</a>
+            <a href="">My Wishliste</a>
+            <a href="">Track my order</a>
+            <a href="">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google </p>
+            <div class="row">
+            <img src="img/pay/app.jpg" alt="">
+            <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secured Payments Gateways</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+        <div class="copyright">
+            <p> © 2023. Ulan Eccomerce Template</p>
+        </div>
+    </footer>
+    <div id="cart">
+        <h2>Cart</h2>
+        <ul id="cart-items"></ul>
+        <p id="total-price">sumtotal: $0.00</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
