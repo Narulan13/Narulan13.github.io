@@ -30,7 +30,6 @@ if (bag) {
         k = (k === 0) ? 1 : 0;
     });
 }
-// Check if localStorage is supported
 function isLocalStorageSupported() {
     try {
         const testKey = 'test';
@@ -43,16 +42,11 @@ function isLocalStorageSupported() {
 }
 
 let cartinv = [];
-
-// Check if localStorage is supported
 if (isLocalStorageSupported()) {
-    // Retrieve cartinv from localStorage when the page loads
     const storedCart = localStorage.getItem('cart');
     if (storedCart) {
         cartinv = JSON.parse(storedCart);
     }
-
-    // Update cart UI initially
     updateCartUI();
 }
 
@@ -83,11 +77,7 @@ function addToCart(productId) {
         } else {
             cartinv.push({ id: productId, name: product.name, price: product.price, quantity });
         }
-
-        // Save cartinv to localStorage
         localStorage.setItem('cart', JSON.stringify(cartinv));
-
-        // Update cart UI
         updateCartUI();
     }
 }
@@ -95,8 +85,6 @@ function addToCart(productId) {
 function removeFromCart(productId) {
     cartinv = cartinv.filter(item => item.id !== productId);
     localStorage.setItem('cart', JSON.stringify(cartinv));
-
-    // Update cart UI
     updateCartUI();
 }
 
@@ -109,8 +97,6 @@ function updateCartUI() {
     cartinv.forEach(item => {
         const li = document.createElement('li');
         li.textContent = `${item.name} - $${(item.price * item.quantity).toFixed(2)} x ${item.quantity}`;
-
-        // Add delete button
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Delete';
         deleteButton.classList.add('normal');
@@ -122,8 +108,6 @@ function updateCartUI() {
         li.appendChild(deleteButton);
         cartItemsElement.appendChild(li);
     });
-
-    // Update total price
     const totalAmount = cartinv.reduce((total, item) => total + item.price * item.quantity, 0);
     totalPriceElement.textContent = `Total Price: $${totalAmount.toFixed(2)}`;
 }
